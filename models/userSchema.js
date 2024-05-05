@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Validator from "validator";
+import validator from "validator";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         minlength: [3, "Name must contain atleast 3 characters!"],
-        maxlength: [3, "Name can't exceed 30 characters!"],
+        maxlength: [30, "Name can't exceed 30 characters!"],
     },
     email:{
         type: String,
@@ -23,7 +23,8 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, "please provide a password"],
         minlength: [8, "Password must have atleast 8 characters!"],
-        maxlength: [32, "Password can't exceed 32 characters!"]
+        maxlength: [32, "Password can't exceed 32 characters!"],
+        select: false
     },
     role:{
         type: String,
@@ -38,8 +39,8 @@ const userSchema = new mongoose.Schema({
 
 
 // Hashing of password
-userSchema.pre(async function(next) {
-    if(!this.isModified(password)){
+userSchema.pre("save",async function (next) {
+    if(!this.isModified("password")){
         next();
     }
     this.password = await bcrypt.hash(this.password, 10);
