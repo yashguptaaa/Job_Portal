@@ -30,7 +30,7 @@ app.use(fileUpload({
 }));
 
 app.use('/api/user',userRouter);
-app.use('api/application',applicationRouter);
+app.use('/api/application',applicationRouter);
 app.use('/api/job',jobRouter);
 
 dbConnection();
