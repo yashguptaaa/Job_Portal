@@ -76,7 +76,7 @@ p {
   display: flex;
   min-width: 1500px;
   max-width: 1500px;
-  margin: 0 auto;
+  margin: 0 50px;
   min-height: 100vh;
 }
 .authPage .container {
@@ -89,7 +89,7 @@ p {
 }
 .authPage .container .header {
   display: flex;
-  gap: 15px;
+  gap: 8px;
   flex-direction: column;
 }
 .authPage .container .header h3 {
@@ -107,12 +107,12 @@ p {
 .authPage .container form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 7px;
 }
 .authPage .container form .inputTag {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 .authPage .container form .inputTag div {
   display: flex;
@@ -140,10 +140,10 @@ p {
   color: #fff;
 }
 .authPage .container form button {
-  padding: 12px;
+  padding: 8px;
   text-align: center;
   border: none;
-  margin-top: 25px;
+  margin-top: 5px;
   font-weight: 700;
   color: #fff;
   background: #2d5649;
@@ -151,10 +151,10 @@ p {
   border-radius: 7px;
 }
 .authPage .container form a {
-  padding: 12px;
+  padding: 8px;
   text-align: center;
   border: 1px solid #2d5649;
-  margin-top: 25px;
+  margin-top: 5px;
   font-weight: 700;
   color: #2d5649;
   font-size: 1.2rem;
@@ -391,8 +391,8 @@ p {
   align-items: center;
   flex: 1;
   height: 350px;
-  padding: 30px 50px;
-  gap: 12px;
+  padding: 20px 20px;
+  gap: 7px;
   justify-content: center;
 }
 .howitworks .container .banner .card:nth-child(2) {
@@ -436,15 +436,15 @@ p {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 50px 0;
-  gap: 35px;
+  padding: 10px 0;
+  gap: 20px;
 }
 .categories .banner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 35px;
-  padding: 20px 0;
+  gap: 15px;
+  padding: 10px 0;
 }
 .categories .banner .card {
   width: 320px;
